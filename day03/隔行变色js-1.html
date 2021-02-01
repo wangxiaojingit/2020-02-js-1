@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        body{
+            background:lightseagreen;
+        }
+        #main{
+            width: 500px;
+            margin:50px auto;
+            color:#666;
+        }
+        #main>li{
+            height: 40px;
+            line-height: 40px;
+            text-indent: 20px;
+        }
+        /* #main>li:nth-child(odd){
+            background:lightgreen;
+        }
+        #main>li:nth-child(even){
+            background:yellow;
+        }
+        #main>li:hover{
+            background:deepskyblue;
+        } */
+
+       
+    </style>
+</head>
+<body>
+    <ul id="main">
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+        <li>走在前沿的专家级课程：珠峰微信小程序实战开发课程</li>
+    </ul>
+</body>
+</html>
+<script>
+    var main=document.getElementById("main");
+    var lis=main.getElementsByTagName("li");
+ 
+    for(var i=0;i<lis.length;i++){
+        if(i%2==0){
+            lis[i].style.backgroundColor="lightgreen";
+            lis[i].oldColor="lightgreen";
+           
+        }else{
+            lis[i].style.backgroundColor="yellow";
+            lis[i].oldColor="yellow";
+            
+        }
+        // 鼠标滑上事件
+        lis[i].onmouseover=function(){
+           this.style.backgroundColor="deepskyblue";
+        }
+        
+        // 鼠标离开 还原人家原来的颜色
+        lis[i].onmouseout=function(){
+             
+             this.style.backgroundColor=this.oldColor;
+        }
+
+       
+    }
+
+    
+   
+
+   
+
+</script>

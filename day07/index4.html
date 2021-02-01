@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main li{
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box">box</div>
+    <div class="box">box2</div>
+    <ul id="ul" class="main">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <li>4</li>
+    <li>4</li>
+    <input type="text" name="userName">
+    <input type="text" name="userName">
+    <div name="aa"></div>
+</body>
+</html>
+<script>
+    /*1)  通过id名获取页面中的元素：
+     + document是固定的
+     + id 名字在一个页面中不能重名
+     + 可以直接把id名字当成变量去使用
+    */
+    // var box=document.getElementById("box");
+   
+    /* 
+    2）通过标签名获取一组元素
+    
+    */
+     var ul=document.getElementById("ul");
+    var lis=ul.getElementsByTagName("li");
+
+    /* 
+     3）通过类名获取一组元素
+    */
+   var divs=document.getElementsByClassName("box");
+
+
+   /* 
+   4）通过name名字得到一组元素
+      document 是固定（还有id 也是）
+      对于非表单元素，通过此方法获取元素，在ie9以下不兼容获取不到
+   */
+  var input=document.getElementsByName("userName");
+
+  /* 
+    5)通过选择器的方法得到元素：
+    document.querySelector(".main>li");// 获取到的是第一个元素
+    document.querySelectorAll(".main>li");// 获取到所有的
+
+  */
+
+ /* 
+   6）获取页面的头部：document.head
+   7）获取页面的身体：document.body
+   8) 获取html: document.documentElement
+   9) 获取一屏幕的宽或者是高 
+   document.documentElement.clientWidth||document.body.clientWidth;
+   document.documentElement.clientHeight||document.body.clientHeight;
+ */
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+       <h1>h1</h1>
+    </div>
+</body>
+</html>
+<script>
+    document.createElement("h1");// 创建一个元素
+    document.createTextNode("哈哈");// 创建一个文本节点
+    oh1.appendChild(otext);// 容器.appendChild(节点);节点放到容器的里面
+    document.body.appendChild(oh1);
+    main.removeChild(op);//容器.removeChild(节点);删除容器里面的节点
+    main.insertBefore(h2,h1);//容器.insertBefore(ele1,ele2)把ele1插入到ele2的前面
+    main.cloneNode();// 浅克隆，单纯的只克隆了一层
+    main.cloneNode(true);// 深克隆：把里面所有的结构都给克隆
+
+    //====>第一种方式：把属性名和属性值添加到了dom结构上了，三个方法是一组，不能和第二种方式混用
+
+    main.setAttribute("index",0);// 给元素添加属性，第一个参数：属性名，第二个参数：属性值
+    main.getAttribute("index");//"0" 获取元素特定属性对应的属性值
+    main.removeAttribute("index");// 删除属性
+
+    //=====> 以对象的形式进行的添加,添加到堆内存中了，你可以通过console.dir(元素)，可以看到其属性和属性值。
+    // 添加属性名和属性值
+    main["index"]=100;
+    main.index=100;
+    // 获取
+    main["index"];
+    main.index;
+
+    // 删除
+    delete main["index"];
+    delete main.index;
+
+</script>
+
+

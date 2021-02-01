@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            
+        }
+        .f1{
+            font-size:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box1" style="color:red;background-color: yellow;">box</div>
+</body>
+</html>
+<script>
+    var obox=document.getElementById("box");
+    console.log(obox.id);
+    console.log(obox.className);
+    console.log(obox.style.color);
+    console.log(obox.style.backgroundColor);
+    // 鼠标滑上事件
+    obox.onmouseover=function(){
+        console.log("鼠标滑上")
+    }
+    // 鼠标离开事件
+    obox.onmouseout=function(){
+        console.log("鼠标离开")
+    }
+    obox.onmousemove=function(){
+        console.log("鼠标move")
+    }
+    // 点击
+    obox.onclick=function(){
+      alert("1")
+    }
+
+</script>

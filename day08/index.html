@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="h1">h1</h1>
+        <!-- 注释 -->
+        <span id="box">box</span>
+    </div>
+    <ul id="oul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
+<script >
+    box.parentNode;// 获取某个节点的父节点
+    main.childNodes;// 获取当前节点下面所有的子节点
+    oul.children;// 获取当前节点下面所有的子元素（ie6-ie8不兼容）
+    box.previousSibling;// 获取当前节点的哥哥节点（向上的兄弟）
+    box.previousElementSibling;// 获取当前节点的哥哥元素节点（ie6-ie8不兼容）
+    h1.nextSibling.nextSibling;//获取当前节点的弟弟节点（向下的兄弟）
+    h1.nextElementSibling;//获取向下的兄弟元素（ie6-ie8不兼容）
+    main.firstChild;// 获取当前节点下面的第一个子节点
+    main.firstElementChild;//获取当前节点下面的第一个子元素（ie6-ie8不兼容）
+    main.lastChild;//获取当前节点下面的最后一个子节点
+    main.lastElementChild;//获取当前节点下面的最后一个子元素（ie6-ie8不兼容）
+</script>

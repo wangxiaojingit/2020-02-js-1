@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <!-- 注释 -->
+        <h1 id="h1">h1</h1>
+        <span id="box">box</span>
+    </div>
+    <ul id="oul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>
+<script>
+    function myChildren(oul){
+        var nodes = oul.childNodes;//拿到了所有的子节点
+        var ary = [];// 盛放最后筛选所有的元素盒子
+        for (var i = 0; i < nodes.length; i++) {
+            //说明是元素
+            if (nodes[i].nodeType == 1) {
+                ary.push(nodes[i]);
+            }
+        }
+        return ary;
+    }
+    var oul = document.getElementById("oul");
+    var main = document.getElementById("main");
+    myChildren(main);
+
+</script>

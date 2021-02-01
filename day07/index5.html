@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <input type="text" name="he1">
+   
+    <h1>h1</h1>
+    <input type="text" name="he1" index="2">
+    <input type="text" name="he2">
+</div>
+</body>
+
+</html>
+<script>
+    // document.getElementsByName("he1")
+    function myGetName(context,attr,val) {
+        var allTag = context.getElementsByTagName("*");
+        var ary = [];
+        for (var i = 0; i < allTag.length; i++) {
+            if (allTag[i][attr] == val) {
+                ary.push(allTag[i])
+            }
+        }
+        return ary;
+    }
+
+    var main=document.getElementById("main");
+    myGetName(main,"name","he1");
+    myGetName(main,"index","2");
+   
+
+</script>
