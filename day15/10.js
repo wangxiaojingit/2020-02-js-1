@@ -13,6 +13,10 @@ function Fn(){
     this.name="li";
     this.age=18;
     this.job=function(){}
+   
+}
+Fn.prototype.write=function(){
+
 }
 function Fn2(){
 
